@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signup form</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="container">
+    <div class="signup-box">
+      <h2> Please Create your account</h2>
+      <form action="../Backend/register.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Please enter your Name" required/>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Please enter your email" required/>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"
+          placeholder="Enter your strong password"
+          
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}"
+          title="Password must include: 1 uppercase, 1 lowercase, 1 number, 1 special character, and be at least 8 characters long"
+        />
+
+       
+
+        <button class="btn" name="submit">Register</button>
+      </form>
+
+      <p class="back-link">
+        <a href="login.html">← Back to login</a>
+      </p>
+    </div>
+  </div>
+  </body>
+</html>
